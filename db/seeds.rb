@@ -6,5 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 (1..10).each do |x|
-  Product.create(name: "Test Movie #{x}")
+  User.create(
+    first_name: Faker::TvShows::GameOfThrones.character, 
+    last_name: Faker::TvShows::GameOfThrones.character, 
+    age: 25, 
+    address: Faker::TvShows::GameOfThrones.character)
 end
